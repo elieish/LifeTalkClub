@@ -29,9 +29,9 @@ return array(
 	'connections' => array(
 
 		'production' => array(
-			'host'      => '',
-			'username'  => '',
-			'password'  => '',
+			'host'      => 'www.lifetalkclub.com',
+			'username'  => 'lifetteqnt',
+			'password'  => 's7O6RCLp',
 			'key'       => '',
 			'keyphrase' => '',
 			'root'      => '/var/www',

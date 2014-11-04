@@ -12,3 +12,7 @@
 */
 
 Route::controller('/', 'HomeController');
+
+Route::get('login', array('as' => 'login', 'uses' => 'UserController@login'));
+
+

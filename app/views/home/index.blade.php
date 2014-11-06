@@ -14,8 +14,7 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Be transformed from Zero to Hero</h1>
-                                    <h2 class="animation animated-item-2"></h2>
+                                    <h2 class="animation animated-item-2">Be transformed from Zero to Hero</h2>
                                     <a class="btn-slide animation animated-item-3" href="#">Read More</a>
                                 </div>
                             </div>

@@ -8,9 +8,9 @@
             </div>
             <div class="pricing-area text-center">
                 <div class="row">
-                    <div class="col-sm-4 plan price-one wow fadeInDown">
+                    <div class="col-sm-4 plan price-eight wow fadeInDown">
                         <ul>
-                            <li class="heading-one">
+                            <li class="heading-eight">
                                 <h1>Bronze</h1>
                                 <span>R350/Month</span>
                             </li>
@@ -25,9 +25,9 @@
                         </ul>
                     </div>
 
-                    <div class="col-sm-4 plan price-two wow fadeInDown">
+                    <div class="col-sm-4 plan price-nine wow fadeInDown">
                         <ul>
-                            <li class="heading-two">
+                            <li class="heading-nine">
                                 <h1>Silver</h1>
                                 <span>R750/Month</span>
                             </li>

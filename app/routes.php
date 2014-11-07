@@ -17,6 +17,9 @@
 
 Route::controller('about', 'AboutController');
 
+Route::controller('users', 'UserController');
+
 Route::controller('/', 'HomeController');
+
 
 

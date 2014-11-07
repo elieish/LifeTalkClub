@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
+			'host'      => 'sql9.cpt4.host-h.net',
+			'database'  => 'lifetteqnt_db1',
+			'username'  => 'lifetteqnt_1',
+			'password'  => 'ZwJZU1Y8',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

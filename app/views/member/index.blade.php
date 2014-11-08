@@ -20,7 +20,7 @@
                             <li>10 Email Account</li>
                             <li>24/7 Support</li>
                             <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
+                                <a href="members/signup" class="btn btn-primary">Sign up</a>
                             </li>
                         </ul>
                     </div>
@@ -37,7 +37,7 @@
                             <li>20 Email Account</li>
                             <li>24/7 Support</li>
                             <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
+                                <a href="members/signup" class="btn btn-primary">Sign up</a>
                             </li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@
                             <li>Unlimited Email Account</li>
                             <li>24/7 Support</li>
                             <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
+                                <a href="members/signup" class="btn btn-primary">Sign up</a>
                             </li>
                         </ul>
                     </div>
@@ -92,7 +92,7 @@
                             <li>Unlimited Email Account</li>
                             <li>24/7 Support</li>
                             <li class="plan-action">
-                                <a href="" class="btn btn-primary">Sign up</a>
+                                <a href="members/signup" class="btn btn-primary">Sign up</a>
                             </li>
                         </ul>
                     </div>

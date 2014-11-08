@@ -71,8 +71,8 @@
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
                         <li {{ (Request::is('/') ? 'class="active"' : '') }}><a href="/">Home</a></li>
-                        <li {{ (Request::is('about') ? 'class="active"' : '') }}><a href="about">About Us</a></li>
-                        <li {{ (Request::is('members') ? 'class="active"' : '') }}><a href="members">Members</a></li>
+                        <li {{ (Request::is('/about') ? 'class="active"' : '') }}><a href="/about">About Us</a></li>
+                        <li {{ (Request::is('/members') ? 'class="active"' : '') }}><a href="/members">Members</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Partners</a></li>
                         <li><a href="#">Contact</a></li>
@@ -96,7 +96,7 @@
                 <div class="col-sm-6">
                     <ul class="pull-right">
                         <li><a href="/">Home</a></li>
-                        <li><a href="about">About Us</a></li>
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="#">Faq</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>

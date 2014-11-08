@@ -20,4 +20,10 @@ class MemberController extends BaseController {
         return View::make('member.index');
     }
 
+     public function getSignup()
+    {
+        return View::make('member.signup');
+    }
+
+
 }

@@ -12,7 +12,21 @@ class CreateUsersTables extends Migration {
 	 */
 	public function up()
 	{
-		//
+		 Schema::create('users', function ($table)
+        {
+            $table->increments('id');
+            $table->timestamps();
+            $table->smallInteger('created_by');
+            $table->smallInteger('update_by');
+            $table->string('first_name', 120);
+            $table->string('last_name', 120);
+            $table->string('email', 160)->unique();
+            $table->string('username', 128)->unique();
+            $table->string('password', 60);
+            $table->smallInteger('role')->default(0);
+            $table->tinyInteger('active')->default(0);
+            $table->rememberToken();
+        });
 	}
 
 	/**
@@ -22,7 +36,7 @@ class CreateUsersTables extends Migration {
 	 */
 	public function down()
 	{
-		//
+		Schema::drop('users');
 	}
 
 }

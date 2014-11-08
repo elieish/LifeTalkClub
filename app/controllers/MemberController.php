@@ -25,5 +25,41 @@ class MemberController extends BaseController {
         return View::make('member.signup');
     }
 
+      public function postSave()
+    {
+        // Get  Form Data
+        $data       = Input::all();
+
+        // Validation rules
+        $rules      = array (
+                        'title'      =>  'required',
+                        'cell'       =>  'required',
+                        'tel'        =>  'required',
+                        'dob'        =>  'required'
+
+        );
+
+        //Validate data
+        $validator  = Validator::make ($data , $rules);
+
+        if ($validator -> passes()) {
+            // save
+            $industry         = new Member;
+            $industry->name   = Input::get('name');
+            $industry->save();
+
+            // redirect
+            Session::flash('message', 'Successfully saved');
+            return Redirect::to('/admin/industries');
+        }
+        else {
+
+            return Redirect::to('/members/signup/')->withErrors($validator);
+
+        }
+
+    }
+
+
 
 }

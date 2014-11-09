@@ -113,7 +113,6 @@
                             {{ Form::label('Confirm Password', 'Confirm Password *') }}
                             {{ Form::text('cpassword', Input::old('cpassword'), array('class' => 'form-control')) }}
                         </div>
-
                         <input type="button" id="previous" class="previous action-button" value="Previous" />
                         <input type="button" id="next" class="next action-button" value="Next" />
 

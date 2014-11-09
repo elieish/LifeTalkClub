@@ -3,8 +3,8 @@
   <section id="contact-page">
         <div class="container">
             <div class="center">
-                <h2>Drop Your Message</h2>
-                <p class="lead">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2>MEMBERSHIP REGISTRATION FORM</h2>
+                <p class="lead"></p>
             </div>
             <div class="row contact-wrap">
                 <div class="status alert alert-success" style="display: none"></div>
@@ -42,7 +42,7 @@
                     </fieldset>
                     <fieldset>
                     <h2 class="fs-title">Member Details</h2>
-                    <h3 class="fs-subtitle">Your presence on the social network</h3>
+                    <h3 class="fs-subtitle">This is step 2</h3>
                         <div class="form-group">
                             {{ Form::label('Title', 'Title *') }}
                             {{ Form::text('title', Input::old('title'), array('class' => 'form-control')) }}
@@ -97,7 +97,7 @@
                     </fieldset>
                     <fieldset>
                     <h2 class="fs-title">Login Details</h2>
-                    <h3 class="fs-subtitle">Your presence on the social network</h3>
+                    <h3 class="fs-subtitle">This is step 3</h3>
 
                         <div class='form-group'>
                             {{ Form::label('Username', 'Username *') }}
@@ -122,7 +122,7 @@
 
                     <fieldset>
                     <h2 class="fs-title">Bank Details</h2>
-                    <h3 class="fs-subtitle">Your presence on the social network</h3>
+                    <h3 class="fs-subtitle">This is step 4</h3>
 
                         <div class='form-group'>
                             {{ Form::label('Name of Bank', 'Name of Bank *') }}

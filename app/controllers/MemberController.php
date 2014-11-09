@@ -30,6 +30,8 @@ class MemberController extends BaseController {
         // Get  Form Data
         $data       = Input::all();
 
+        var_dump($data);die;
+
         // Validation rules
         $rules      = array (
                         'title'      =>  'required',
@@ -44,9 +46,19 @@ class MemberController extends BaseController {
 
         if ($validator -> passes()) {
             // save
-            $industry         = new Member;
-            $industry->name   = Input::get('name');
-            $industry->save();
+            $member             = new Member;
+            $member->title      = Input::get('title');
+            $member->cell       = Input::get('cell');
+            $member->tel        = Input::get('tel');
+            $member->dob        = Input::get('dob');
+            $member->initials   = Input::get('initials');
+            $member->firstname  = Input::get('firstname');
+            $member->surname    = Input::get('surname');
+            $member->idnumber   = Input::get('idnumber');
+            $member->introducer = Input::get('introducer');
+            $member->bankid     = Input::get('bankid');
+            $member->userid     = Input::get('userid');
+            $member->save();
 
             // redirect
             Session::flash('message', 'Successfully saved');

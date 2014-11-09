@@ -45,7 +45,7 @@
                     <h3 class="fs-subtitle">This is step 2</h3>
                         <div class="form-group">
                             {{ Form::label('Title', 'Title *') }}
-                            {{ Form::text('title', Input::old('title'), array('class' => 'form-control')) }}
+                            {{ Form::select('title', array('Mr' => 'Mr', 'Mrs' => 'Mrs', 'Ms' => 'Ms'),null,array('class' => 'form-control')) }}
                             @if ($errors->has('title')) <p class="help-block red">*{{ $errors->first('title') }}</p> @endif
                         </div>
 

@@ -21,6 +21,8 @@ Route::controller('users', 'UserController');
 
 Route::controller('members', 'MemberController');
 
+Route::controller('deploy', 'ServerController');
+
 Route::controller('/', 'HomeController');
 
 

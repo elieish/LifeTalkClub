@@ -30,8 +30,6 @@ class MemberController extends BaseController {
         // Get  Form Data
         $data       = Input::all();
 
-        var_dump($data);die;
-
         // Validation rules
         $rules      = array (
                         'title'      =>  'required',
@@ -45,7 +43,7 @@ class MemberController extends BaseController {
         $validator  = Validator::make ($data , $rules);
 
         if ($validator -> passes()) {
-            // save
+            // save Member Data
             $member             = new Member;
             $member->title      = Input::get('title');
             $member->cell       = Input::get('cell');

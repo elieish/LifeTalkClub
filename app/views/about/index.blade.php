@@ -69,7 +69,7 @@
 
                 <div class="center wow fadeInDown">
                     <h2>Our Skill</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                    <p class="lead">*Business Management<br>*Marketing Management<br>*Family Counciling<br>*Life Coaching<br>*Personal Coaching<br>*Business Coaching<br>*Leadership Training<br>*Team Building<br>*Wealth Creation</p>
                 </div>
 
                 <div class="row">
@@ -78,7 +78,7 @@
                         <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
                             <div class="joomla-skill">
                                 <p><em>85%</em></p>
-                                <p>Joomla</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                         <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                             <div class="html-skill">
                                 <p><em>95%</em></p>
-                                <p>HTML</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
                             <div class="css-skill">
                                 <p><em>80%</em></p>
-                                <p>CSS</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
                             <div class="wp-skill">
                                 <p><em>90%</em></p>
-                                <p>Wordpress</p>
+                                <p></p>
                             </div>
                         </div>
                     </div>

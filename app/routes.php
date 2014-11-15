@@ -23,6 +23,8 @@ Route::controller('members', 'MemberController');
 
 Route::controller('deploy', 'ServerController');
 
+Route::controller('admin', 'AdminLoginController');
+
 Route::controller('/', 'HomeController');
 
 

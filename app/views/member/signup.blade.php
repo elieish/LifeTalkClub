@@ -23,7 +23,7 @@
                     <h3 class="fs-subtitle">This is step 1</h3>
                      <div class="form-group">
                         {{ Form::label('*Introducer Number', 'Introducer Number *') }}
-                        {{ Form::text('intronumber', Input::old('intronumber'), array('class' =>'form-control')) }}
+                        {{ Form::text('intronumber', Input::old('intronumber'), array('class' =>'form-control','id' =>'intronumber')) }}
                     </div>
                     <div class="form-group">
                         {{ Form::label('Tel Number', 'Tel Number *') }}

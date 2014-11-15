@@ -70,6 +70,19 @@ class MemberController extends BaseController {
 
     }
 
+    public function getIntroducer()
+    {
+
+        $name     = Input::get('q');
+
+        $members  = DB::table('members')->select('id as id',DB::raw('CONCAT(firstname, " ", surname) AS name'))
+                    ->where('firstname', 'LIKE', '%' . $name . '%')
+                    ->orWhere('surname', 'LIKE', '%' . $name . '%')
+                    ->get();
+        return json_encode($members);
+
+    }
+
 
 
 }

@@ -135,4 +135,8 @@ jQuery(function($) {'use strict',
 	easing: 'easeInOutBack'
 	});
 	});
+
+	$("#intronumber").tokenInput("/members/introducer/?q=Elie");
+
+	//$("#intronumber").tokenInput([{id: 3, name: "test"}, {id: 5, name: "awesome"}]);
 });

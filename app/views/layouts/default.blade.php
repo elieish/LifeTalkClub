@@ -111,6 +111,7 @@
     {{ HTML::script('js/jquery.prettyPhoto.js') }}
     {{ HTML::script('js/jquery.isotope.min.js') }}
     {{ HTML::script('js/jquery.easing.js') }}
+    {{ HTML::script('js/jquery.tokeninput.js') }}
     {{ HTML::script('js/main.js') }}
     {{ HTML::script('js/wow.min.js') }}
 

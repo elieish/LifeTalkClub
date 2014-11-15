@@ -15,6 +15,7 @@
     {{ HTML::style('css/main.css') }}
     {{ HTML::style('css/responsive.css') }}
     {{ HTML::style('css/form.css') }}
+    {{ HTML::style('css/token-input.css') }}
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>

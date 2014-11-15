@@ -22,22 +22,9 @@
                     <h2 class="fs-title">Introducer Details</h2>
                     <h3 class="fs-subtitle">This is step 1</h3>
                      <div class="form-group">
-                        {{ Form::label('*Introducer Number', 'Introducer Number *') }}
+                        {{ Form::label('*Introducer Names', 'Introducer Names *') }}
                         {{ Form::text('intronumber', Input::old('intronumber'), array('class' =>'form-control','id' =>'intronumber')) }}
                     </div>
-                    <div class="form-group">
-                        {{ Form::label('Tel Number', 'Tel Number *') }}
-                        {{ Form::text('telnumber', Input::old('telnumber'), array('class' =>'form-control')) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('Surname', 'Surname *') }}
-                        {{ Form::text('surname', Input::old('surname'), array('class' =>'form-control')) }}
-                    </div>
-                    <div class="form-group">
-                        {{ Form::label('Initials', 'Initials *') }}
-                        {{ Form::text('initials', Input::old('initials'), array('class' =>'form-control')) }}
-                    </div>
-
                     <input type="button" id="next" class="next action-button" value="Next" />
                     </fieldset>
                     <fieldset>

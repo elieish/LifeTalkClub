@@ -136,7 +136,5 @@ jQuery(function($) {'use strict',
 	});
 	});
 
-	$("#intronumber").tokenInput("/members/introducer/?q=Elie");
-
-	//$("#intronumber").tokenInput([{id: 3, name: "test"}, {id: 5, name: "awesome"}]);
+	$("#intronumber").tokenInput("/members/introducer/?q=query",{resultsLimit : null});
 });

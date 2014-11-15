@@ -7,8 +7,11 @@
                 <p class="lead"></p>
             </div>
             <div class="row contact-wrap">
-                <div class="status alert alert-success" style="display: none"></div>
-
+                   @if(Session::has('message'))
+                    <div class="status alert alert-success">
+                        {{ Session::get('message') }}
+                    </div>
+                    @endif
                 <form id="msform" action='/members/save/' method='POST'>
                     <!-- progressbar -->
                     <ul id="progressbar">

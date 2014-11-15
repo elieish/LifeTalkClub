@@ -19,7 +19,6 @@ class CreateBankdetailsTable extends Migration {
 	        $table->string('branchname');
 	        $table->string('branchcode');
 	        $table->string('accnumber');
-	  		$table->integer('memberid');
 	        $table->timestamps();
 	        $table->integer('updated_by');
 	        $table->integer('created_by');

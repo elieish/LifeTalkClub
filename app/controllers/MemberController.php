@@ -43,6 +43,23 @@ class MemberController extends BaseController {
         $validator  = Validator::make ($data , $rules);
 
         if ($validator -> passes()) {
+
+             // save Member Login Details Data
+            $user             = new User;
+            $user->username   = Input::get('username');
+            $user->password   = Input::get('password');
+            $user->active     = 1;
+            $user->save();
+
+            // save Member Banking Details Data
+            $bank             = new Bank;
+            $bank->bankname   = Input::get('bankname');
+            $bank->branchname = Input::get('branchname');
+            $bank->branchcode = Input::get('branchcode');
+            $bank->accnumber  = Input::get('accnumber');
+            $bank->active     = 1;
+            $bank->save();
+
             // save Member Data
             $member             = new Member;
             $member->title      = Input::get('title');
@@ -53,14 +70,15 @@ class MemberController extends BaseController {
             $member->firstname  = Input::get('firstname');
             $member->surname    = Input::get('surname');
             $member->idnumber   = Input::get('idnumber');
-            $member->introducer = Input::get('introducer');
-            $member->bankid     = Input::get('bankid');
-            $member->userid     = Input::get('userid');
+            $member->introducer = Input::get('intronumber');
+            $member->bankid     = $bank->id;
+            $member->userid     = $user->id;
+            $member->active     = 1;
             $member->save();
 
             // redirect
-            Session::flash('message', 'Successfully saved');
-            return Redirect::to('/admin/industries');
+            Session::flash('message', 'Thank you for your registration');
+            return Redirect::to('/members/signup');
         }
         else {
 

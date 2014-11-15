@@ -47,7 +47,7 @@ class MemberController extends BaseController {
              // save Member Login Details Data
             $user             = new User;
             $user->username   = Input::get('username');
-            $user->password   = Input::get('password');
+            $user->password   = Hash::make(Input::get('password'));
             $user->active     = 1;
             $user->save();
 

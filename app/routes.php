@@ -25,6 +25,8 @@ Route::controller('deploy', 'ServerController');
 
 Route::controller('admin', 'AdminLoginController');
 
+Route::controller('dashboard', 'AdminDashboardController');
+
 Route::controller('/', 'HomeController');
 
 

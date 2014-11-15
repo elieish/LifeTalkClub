@@ -20,4 +20,20 @@ class AdminLoginController extends BaseController {
         return View::make('admin.login');
     }
 
+      public function postLogin()
+    {
+        $username   = Input::get('username');
+        $password   = Input::get('password');
+        if (Auth::attempt(array('username' => $username, 'password' => $password)))
+        {
+            return Redirect::intended('dashboard');
+        }
+        else {
+
+
+            return Redirect::to('admin');
+        }
+    }
+
+
 }

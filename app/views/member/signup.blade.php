@@ -7,9 +7,16 @@
                 <p class="lead"></p>
             </div>
             <div class="row contact-wrap">
-                   @if(Session::has('message'))
+                   @if(Session::has('success'))
                     <div class="status alert alert-success">
-                        {{ Session::get('message') }}
+                        {{ Session::get('success') }}
+                    </div>
+                    @endif
+
+
+                    @if(Session::has('fail'))
+                    <div class="status alert alert-danger">
+                        {{ Session::get('fail') }}
                     </div>
                     @endif
                 <form id="msform" action='/members/save/' method='POST'>
@@ -90,18 +97,21 @@
                     <h3 class="fs-subtitle">This is step 3</h3>
 
                         <div class='form-group'>
-                            {{ Form::label('Username', 'Username *') }}
+                            {{ Form::label('Email Address', 'Email Address *') }}
                             {{ Form::text('username', Input::old('username'), array('class' => 'form-control')) }}
+                            @if ($errors->has('username')) <p class="help-block red">*{{ $errors->first('username') }}</p> @endif
                         </div>
 
                         <div class='form-group'>
                             {{ Form::label('Password', 'Password *') }}
-                            {{ Form::text('password', Input::old('password'), array('class' => 'form-control')) }}
+                            {{ Form::password('password',array('class' => 'form-control')) }}
+                            @if ($errors->has('password')) <p class="help-block red">*{{ $errors->first('password') }}</p> @endif
                         </div>
 
                         <div class='form-group'>
                             {{ Form::label('Confirm Password', 'Confirm Password *') }}
-                            {{ Form::text('cpassword', Input::old('cpassword'), array('class' => 'form-control')) }}
+                            {{ Form::password('password_confirmation',array('class' => 'form-control')) }}
+                             @if ($errors->has('password_confirmation')) <p class="help-block red">*{{ $errors->first('password_confirmation') }}</p> @endif
                         </div>
                         <input type="button" id="previous" class="previous action-button" value="Previous" />
                         <input type="button" id="next" class="next action-button" value="Next" />
@@ -116,21 +126,25 @@
                         <div class='form-group'>
                             {{ Form::label('Name of Bank', 'Name of Bank *') }}
                             {{ Form::text('bankname', Input::old('bankname'), array('class' => 'form-control')) }}
+                            @if ($errors->has('bankname')) <p class="help-block red">*{{ $errors->first('bankname') }}</p> @endif
                         </div>
 
                         <div class='form-group'>
                             {{ Form::label('Branch Name', 'Branch Name *') }}
                             {{ Form::text('branchname', Input::old('branchname'), array('class' => 'form-control')) }}
+                            @if ($errors->has('branchname')) <p class="help-block red">*{{ $errors->first('branchname') }}</p> @endif
                         </div>
 
                         <div class='form-group'>
                             {{ Form::label('Branch Code', 'Branch Code *') }}
                             {{ Form::text('branchcode', Input::old('branchcode'), array('class' => 'form-control')) }}
+                            @if ($errors->has('branchcode')) <p class="help-block red">*{{ $errors->first('branchcode') }}</p> @endif
                         </div>
 
                         <div class='form-group'>
                             {{ Form::label('Account Number', 'Account Number *') }}
                             {{ Form::text('accnumber', Input::old('accnumber'), array('class' => 'form-control')) }}
+                            @if ($errors->has('accnumber')) <p class="help-block red">*{{ $errors->first('accnumber') }}</p> @endif
                         </div>
 
                         <input type="button" id="previous" class="previous action-button" value="Previous" />

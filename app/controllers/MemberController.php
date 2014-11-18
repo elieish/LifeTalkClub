@@ -32,12 +32,26 @@ class MemberController extends BaseController {
 
         // Validation rules
         $rules      = array (
-                        'title'      =>  'required',
-                        'cell'       =>  'required',
-                        'tel'        =>  'required',
-                        'dob'        =>  'required'
+                        'title'                 =>  'required',
+                        'cell'                  =>  'required|unique:members',
+                        'idnumber'              =>  'required|max:13|unique:members',
+                        'username'              =>  'required|email|unique:users,username',
+                        'password'              =>  'required|confirmed',
+                        'password_confirmation' =>  'required',
+                        'tel'                   =>  'required',
+                        'dob'                   =>  'required',
+                        'bankname'              =>  'required',
+                        'branchname'            =>  'required',
+                        'branchcode'            =>  'required',
+                        'accnumber'             =>  'required'
 
         );
+
+        // Flashing Input to the session
+        Input::flash();
+
+        // Exclude passwords
+        Input::flashExcept('password');
 
         //Validate data
         $validator  = Validator::make ($data , $rules);
@@ -77,12 +91,13 @@ class MemberController extends BaseController {
             $member->save();
 
             // redirect
-            Session::flash('message', 'Thank you for your registration');
+            Session::flash('success', 'Thank you for your registration');
             return Redirect::to('/members/signup');
         }
         else {
 
-            return Redirect::to('/members/signup/')->withErrors($validator);
+            Session::flash('fail', 'Errors on the form,Please resubmit the form');
+            return Redirect::to('/members/signup/')->withErrors($validator)->withInput(Input::except('password'));
 
         }
 

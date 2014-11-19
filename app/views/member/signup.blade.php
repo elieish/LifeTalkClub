@@ -19,7 +19,7 @@
                         {{ Session::get('fail') }}
                     </div>
                     @endif
-                <form id="msform" action='/members/save/' method='POST'>
+                <form id="msform" action='/members/save' method='POST'>
                     <!-- progressbar -->
                     <ul id="progressbar">
                         <li class="active">Introducer Details</li>

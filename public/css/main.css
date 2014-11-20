@@ -2550,6 +2550,172 @@ shortcodes page css
   color:red;
 }
 
+/*
+    SIGN IN
+    Top Head Drop Down
+  */
+
+.signin-dd {
+    position:relative;
+  }
+
+  .signin-dd .hidden-xs{
+    display: inline !important
+  }
+
+.signin-dd .dropdown-menu {
+    padding:5px 10px;
+  }
+.signin-dd h2,
+.signin-dd h3,
+.signin-dd h4,
+.signin-dd h5,
+.signin-dd h6 {
+    font-size:16px;
+    line-height:23px;
+    display:block;
+    margin-bottom:6px !important;
+  }
+.signin-dd h4,
+.signin-dd {
+    margin:0;
+  }
+.signin-dd p {
+    color:#888;
+  }
+
+.signin-dd input[type="text"],
+.signin-dd input[type="password"],
+.signin-dd input[type="email"] {
+    margin:0; border:0;
+    padding:8px !important;
+    height:38px;
+
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+        border-radius: 3px;
+  }
+  #topHead .signin-dd .input-group input {
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+        border-radius: 0;
+
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  .signin-dd p,
+  .signin-dd form,
+  .signin-dd form a,
+  .signin-dd form label {
+    font-size:13px;
+  }
+
+
+  .signin-dd form {
+    width:250px;
+  }
+  .signin-dd .form-group {
+    margin-bottom:3px !important;
+  }
+  .signin-dd form .input-group-btn,
+  .signin-dd form label {
+    margin:0; padding:0;
+    line-height:20px;
+  }
+  .signin-dd form div.checkbox {
+    line-height:20px;
+    margin:3px 0 0 0;
+  }
+  .signin-dd form div.checkbox input { /* IE FIX */
+    float:left;
+    display:inline-block;
+    margin-top:4px;
+    margin-right:6px;
+  }
+  .signin-dd form div.checkbox label {
+    display:inline-block;
+  }
+  .signin-dd form .input-group-btn .btn,
+  .signin-dd form .input-group .btn,
+  .signin-dd form .form-control {
+    border:0;
+    height:38px;
+    margin-top:0;
+  }
+  .signin-dd form button,
+  .signin-dd form button:hover {
+    -webkit-transition: all 0s;
+       -moz-transition: all 0s;
+       -o-transition: all 0s;
+        transition: all 0s;
+  }
+  .signin-dd form button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 0; height: 0;
+    z-index:100;
+    left: -18px;
+    top: 50%; margin-top:-10px;
+  }
+  .signin-dd form button:hover:after {
+    margin-left:-1px; /* temporary fix */
+  }
+
+  .dropdown-menu hr {
+    border: 0;
+    padding: 0;
+    margin: 10px 0;
+    border-bottom: #465260 1px solid;
+    border-top: #1B1F23 1px solid;
+  }
+
+  .bottom-create-account {
+    text-align:center;
+    margin:0 -10px -5px -10px;
+  }
+  .bottom-create-account a {
+    background:#C52D2F !important;
+    margin-top:6px;
+    padding:6px 0;
+    display:block;
+    text-decoration:none;
+
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+        border-radius: 0;
+
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+    -webkit-transition: all 0.2s;
+       -moz-transition: all 0.2s;
+       -o-transition: all 0.2s;
+        transition: all 0.2s;
+  }
+  .bottom-create-account a:hover {
+    background:rgba(0,0,0,0.5);
+  }
+
+  .forgot {
+  color:#C52D2F !important;
+}
+
+.quick_sign_in {
+  color:white !important;
+}
+
+
+
+
 
 
 

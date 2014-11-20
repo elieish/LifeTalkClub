@@ -38,7 +38,7 @@
                         <div class="top-number"><p><i class="fa fa-phone-square"></i>  +27 613 861 287</p></div>
                     </div>
                     <div class="col-sm-6 col-xs-8">
-                       <div class="social">
+                       <!-- <div class="social">
                             <ul class="social-share">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -52,7 +52,49 @@
                                     <i class="fa fa-search"></i>
                                 </form>
                            </div>
-                       </div>
+                       </div> -->
+                    <!-- SIGN IN -->
+                    <div class="pull-right nav signin-dd">
+                        <a class="quick_sign_in" id="quick_sign_in" href="page-signin.html" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Sign In</span></a>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
+
+                            <h4>Sign In</h4>
+                            <form action="page-signin.html" method="post" role="form">
+
+                                <div class="form-group"><!-- email -->
+                                    <input required type="email" class="form-control" placeholder="Username or email">
+                                </div>
+
+                                <div class="input-group">
+
+                                    <!-- password -->
+                                    <input required type="password" class="form-control" placeholder="Password">
+
+                                    <!-- submit button -->
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary">Sign In</button>
+                                    </span>
+
+                                </div>
+
+                                <div class="checkbox"><!-- remmember -->
+                                    <label>
+                                        <input type="checkbox"> Remember me &bull; <a class="forgot" href="page-signin.html">Forgot password?</a>
+                                    </label>
+                                </div>
+
+                            </form>
+
+                            <hr />
+
+
+
+                            <p class="bottom-create-account">
+                                <a href="page-signup.html" class="quick_sign_in">Create Account</a>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /SIGN IN -->
                     </div>
                 </div>
             </div><!--/.container-->

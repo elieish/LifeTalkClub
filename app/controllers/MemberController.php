@@ -93,6 +93,9 @@ class MemberController extends BaseController {
             // redirect
             Session::flash('success', 'Thank you for your registration');
             return Redirect::to('/members/signup');
+
+            // redirect
+            Auth::loginUsingId($user->id);
         }
         else {
 

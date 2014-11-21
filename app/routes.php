@@ -12,9 +12,6 @@
 */
 
 
-
-/*Route::get('login', array('as' => 'login', 'uses' => 'UserController@login'));*/
-
 Route::controller('about', 'AboutController');
 
 Route::controller('users', 'UserController');
@@ -26,6 +23,11 @@ Route::controller('deploy', 'ServerController');
 Route::controller('admin', 'AdminLoginController');
 
 Route::controller('dashboard', 'AdminDashboardController');
+
+Route::get('logout', function () {
+    Auth::logout();
+    return Redirect::to('/');
+});
 
 Route::controller('/', 'HomeController');
 

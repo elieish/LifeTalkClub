@@ -88,23 +88,22 @@
 
                             <hr />
 
-
-
                             <p class="bottom-create-account">
                                 <a href="/members/signup" class="quick_sign_in">Create Account</a>
                             </p>
                         </div>
                     </div>
                     @else
+                    <?php $member = Member::find(Auth::id());   ?>
                     <div class="pull-right nav signin-dd">
-                        <a class='quick_sign_in' id="quick_sign_in" href="#" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Welcome, {{Auth::user()->first_name}} {{Auth::user()->last_name}}</span></a>
+                        <a class='quick_sign_in' id="quick_sign_in" href="#" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Welcome, {{ $member->firstname}} {{ $member->surname }}</span></a>
                         <div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
 
                             <h4>Profile</h4>
                             <!-- User image -->
                             <li class="user-header bg-light-blue">
                                  <div class="pull-left">
-                                    <a href="/client/account" class="btn btn-default btn-flat">Profile</a>
+                                    <a href="/user/account" class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">
                                     <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
@@ -116,6 +115,7 @@
                             </li>
                         </div>
                     </div>
+                    @endif
                     <!-- /SIGN IN -->
                     </div>
                 </div>

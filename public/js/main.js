@@ -137,4 +137,8 @@ jQuery(function($) {'use strict',
 	});
 
 	$("#intronumber").tokenInput("/members/introducer/?q=query",{resultsLimit : null});
+
+	  $('.dropdown-menu input, .dropdown-menu label').click(function(e) {
+        e.stopPropagation();
+    });
 });

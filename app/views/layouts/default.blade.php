@@ -54,25 +54,26 @@
                            </div>
                        </div> -->
                     <!-- SIGN IN -->
+                    @if(!Auth::check())
                     <div class="pull-right nav signin-dd">
                         <a class="quick_sign_in" id="quick_sign_in" href="page-signin.html" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Sign In</span></a>
                         <div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
 
                             <h4>Sign In</h4>
-                            <form action="page-signin.html" method="post" role="form">
+                            <form action="/users/login" method="post" role="form">
 
                                 <div class="form-group"><!-- email -->
-                                    <input required type="email" class="form-control" placeholder="Username or email">
+                                    <input class="form-control" placeholder="Username or email" name="username" type="text">
                                 </div>
 
                                 <div class="input-group">
 
                                     <!-- password -->
-                                    <input required type="password" class="form-control" placeholder="Password">
+                                    <input  class="form-control" placeholder="Password" name="password" type="password">
 
                                     <!-- submit button -->
                                     <span class="input-group-btn">
-                                        <button class="btn btn-primary">Sign In</button>
+                                        <button class="btn btn-primary" type="submit">Sign In</button>
                                     </span>
 
                                 </div>
@@ -90,8 +91,29 @@
 
 
                             <p class="bottom-create-account">
-                                <a href="page-signup.html" class="quick_sign_in">Create Account</a>
+                                <a href="/members/signup" class="quick_sign_in">Create Account</a>
                             </p>
+                        </div>
+                    </div>
+                    @else
+                    <div class="pull-right nav signin-dd">
+                        <a class='quick_sign_in' id="quick_sign_in" href="#" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Welcome, {{Auth::user()->first_name}} {{Auth::user()->last_name}}</span></a>
+                        <div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
+
+                            <h4>Profile</h4>
+                            <!-- User image -->
+                            <li class="user-header bg-light-blue">
+                                 <div class="pull-left">
+                                    <a href="/client/account" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="/logout" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+
+                            </li>
                         </div>
                     </div>
                     <!-- /SIGN IN -->

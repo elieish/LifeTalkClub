@@ -20,14 +20,21 @@ class UserController extends BaseController {
         return View::make('users.login');
     }
 
-    public function getLogin()
+    public function postLogin()
     {
-        return View::make('users.login');
-    }
+        $username   = Input::get('username');
+        $password   = Input::get('password');
 
-    public function getSignup()
-    {
-        return View::make('users.login');
+        if (Auth::attempt(array('username' => $username, 'password' => $password, 'active' => 1)))
+        {
+
+            return Redirect::intended('/');
+        }
+        else {
+
+
+            return Redirect::to('/admin');
+        }
     }
 
 }

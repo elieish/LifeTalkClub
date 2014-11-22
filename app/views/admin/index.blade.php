@@ -12,7 +12,10 @@
                 <!-- Welcome -->
                 <div class="col-lg-12">
                     <div class="alert alert-info">
-                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>Jonny Deen </b>
+                        @if(Auth::check())
+                        <?php $member = Member::find(Auth::id());   ?>
+                        <i class="fa fa-folder-open"></i><b>&nbsp;Hello ! </b>Welcome Back <b>{{ $member->firstname }} {{ $member->surname }} </b>
+                        @endif
  <i class="fa  fa-pencil"></i><b>&nbsp;2,000 </b>Support Tickets Pending to Answere. nbsp;
                     </div>
                 </div>

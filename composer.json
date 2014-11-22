@@ -4,8 +4,14 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"eternicode/bootstrap-datepicker": "dev-master"
 	},
+	  "require-dev": {
+        "way/generators": "~2.0",
+        "darsain/laravel-console": "dev-master",
+        "leroy-merlin-br/larasniffer": "dev-master"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",

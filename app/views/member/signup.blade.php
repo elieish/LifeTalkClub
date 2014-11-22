@@ -60,7 +60,8 @@
 
                         <div class="form-group">
                             {{ Form::label('Date of Birth', 'Date of Birth *') }}
-                            {{ Form::text('dob', Input::old('dob'), array('class' => 'form-control')) }}
+                            <!--    {{ Form::text('dob', Input::old('dob'), array('class' => 'form-control')) }} -->
+                            {{ Form::text('dob', '', array('class' => 'form-control','placeholder' => 'a tua data de nascimento','data-datepicker' => 'datepicker')) }}
                             @if ($errors->has('dob')) <p class="help-block red">*{{ $errors->first('dob') }}</p> @endif
                         </div>
 

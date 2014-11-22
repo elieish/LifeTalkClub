@@ -19,7 +19,6 @@ class MemberController extends BaseController {
     {
         return View::make('member.index');
     }
-
      public function getSignup()
     {
         return View::make('member.signup');
@@ -62,6 +61,7 @@ class MemberController extends BaseController {
             $user             = new User;
             $user->username   = Input::get('username');
             $user->password   = Hash::make(Input::get('password'));
+            $user->role       = 2;
             $user->active     = 1;
             $user->save();
 
@@ -119,6 +119,9 @@ class MemberController extends BaseController {
 
     }
 
-
+    public function getListing()
+    {
+        return View::make('admin.member');
+    }
 
 }

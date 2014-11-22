@@ -94,9 +94,9 @@
                         </div>
                     </div>
                     @else
-                    <?php $member = Member::find(Auth::id());   ?>
+                    <?php $member = DB::table('members')->where('userid', '=' ,Auth::id())->first(); ?>
                     <div class="pull-right nav signin-dd">
-                        <a class='quick_sign_in' id="quick_sign_in" href="#" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Welcome, {{ $member->firstname}} {{ $member->surname }}</span></a>
+                        <a class='quick_sign_in' id="quick_sign_in" href="#" data-toggle="dropdown"><i class="fa fa-users"></i><span class="hidden-xs"> Welcome, {{ $member->firstname }} {{ $member->surname }}  </span></a>
                         <div class="dropdown-menu" role="menu" aria-labelledby="quick_sign_in">
 
                             <h4>Profile</h4>

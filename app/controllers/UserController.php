@@ -28,9 +28,13 @@ class UserController extends BaseController {
         if (Auth::attempt(array('username' => $username, 'password' => $password, 'active' => 1)))
         {
             if(Auth::user()->role == 1)
+            {
                 return Redirect::intended('dashboard');
+            }
             else
+            {
                 return Redirect::intended('/');
+            }
         }
         else {
 

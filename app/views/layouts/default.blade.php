@@ -16,6 +16,8 @@
     {{ HTML::style('css/responsive.css') }}
     {{ HTML::style('css/form.css') }}
     {{ HTML::style('css/token-input.css') }}
+    {{ HTML::style('packages/eternicode/bootstrap-datepicker/css/datepicker3.css') }}
+
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -177,6 +179,7 @@
     {{ HTML::script('js/jquery.isotope.min.js') }}
     {{ HTML::script('js/jquery.easing.js') }}
     {{ HTML::script('js/jquery.tokeninput.js') }}
+    {{ HTML::script('packages/eternicode/bootstrap-datepicker/js/bootstrap-datepicker.js') }}
     {{ HTML::script('js/main.js') }}
     {{ HTML::script('js/wow.min.js') }}
 

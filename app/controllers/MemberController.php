@@ -87,6 +87,7 @@ class MemberController extends BaseController {
             $member->introducer = Input::get('intronumber');
             $member->bankid     = $bank->id;
             $member->userid     = $user->id;
+            $member->membershipno   = str_pad($member->id, 5, '0', STR_PAD_LEFT);
             $member->active     = 1;
             $member->save();
 

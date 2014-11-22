@@ -60,6 +60,8 @@ class MemberController extends BaseController {
              // save Member Login Details Data
             $user             = new User;
             $user->username   = Input::get('username');
+            $user->firstname  = Input::get('firstname');
+            $user->surname    = Input::get('surname');
             $user->password   = Hash::make(Input::get('password'));
             $user->role       = 2;
             $user->active     = 1;
@@ -87,7 +89,7 @@ class MemberController extends BaseController {
             $member->introducer = Input::get('intronumber');
             $member->bankid     = $bank->id;
             $member->userid     = $user->id;
-            $member->membershipno   = str_pad($member->id, 5, '0', STR_PAD_LEFT);
+            $member->membershipno   = str_pad($user->id, 5, '0', STR_PAD_LEFT);
             $member->active     = 1;
             $member->save();
 
@@ -122,7 +124,15 @@ class MemberController extends BaseController {
 
     public function getListing()
     {
-        return View::make('admin.member');
+        $members = Member::join('users', function($join)
+                {
+                    $join->on('members.userid', '=', 'users.id');
+                })
+                ->select('members.membershipno','members.created_at','members.firstname','members.surname', 'members.idnumber')
+                ->where('members.active', '=', 1)
+                ->paginate(15);
+
+        return View::make('admin.member')->with('members',$members);
     }
 
 }

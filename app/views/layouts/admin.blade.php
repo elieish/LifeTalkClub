@@ -266,8 +266,8 @@
                             </div>
                             <div class="user-info">
                                 @if(Auth::check())
-                                <?php $member = DB::table('members')->where('userid', '=' ,Auth::id())->first(); ?>
-                                <div>{{ $member->firstname }} <strong> {{ $member->surname }}</strong></div>
+
+                                <div>{{ Auth::user()->firstname }} <strong> {{Auth::user()->surname }}</strong></div>
                                 @endif
                                 <div class="user-text-online">
                                     <span class="user-circle-online btn btn-success btn-circle "></span>&nbsp;Online

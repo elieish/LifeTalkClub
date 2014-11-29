@@ -143,7 +143,7 @@
                         <li {{ (Request::is('members') ? 'class="active"' : '') }}><a href="/members">Members</a></li>
                         <li><a href="#">Services</a></li>
                         <li><a href="#">Partners</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li  {{ (Request::is('contact') ? 'class="active"' : '') }}><a href="/contact">Contact</a></li>
                     </ul>
                 </div>
             </div><!--/.container-->

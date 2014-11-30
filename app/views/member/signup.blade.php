@@ -71,6 +71,12 @@
                         </div>
 
                         <div class="form-group">
+                            {{ Form::label('Gender', 'Gender *') }}
+                            {{ Form::select('gender', array('M' => 'Male', 'F' => 'Female'),null,array('class' => 'form-control')) }}
+                            @if ($errors->has('gender')) <p class="help-block red">*{{ $errors->first('gender') }}</p> @endif
+                        </div>
+
+                        <div class="form-group">
                             {{ Form::label('First Names', 'First Names *') }}
                             {{ Form::text('firstname', Input::old('firstname'), array('class' => 'form-control')) }}
                             @if ($errors->has('firstname')) <p class="help-block red">*{{ $errors->first('firstname') }}</p> @endif

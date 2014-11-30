@@ -42,6 +42,7 @@ class MemberController extends BaseController {
                         'bankname'              =>  'required',
                         'branchname'            =>  'required',
                         'branchcode'            =>  'required',
+                        'gender'                =>  'required',
                         'accnumber'             =>  'required'
 
         );
@@ -87,6 +88,7 @@ class MemberController extends BaseController {
             $member->surname    = Input::get('surname');
             $member->idnumber   = Input::get('idnumber');
             $member->introducer = Input::get('intronumber');
+            $member->gender     = Input::get('gender');
             $member->bankid     = $bank->id;
             $member->userid     = $user->id;
             $member->membershipno   = str_pad($user->id, 5, '0', STR_PAD_LEFT);

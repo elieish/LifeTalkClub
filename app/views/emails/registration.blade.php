@@ -48,7 +48,7 @@
 
                                                         <p>This message is to confirm that your registration on Life Talk Club has been successful.</p>
                                                         <p> The details of your account are below:</p>
-                                                        <p> Membership No: {{ $data['membershipno'] }}
+                                                        <p> Membership No: {{ $membershipno }}
                                                         <p>Username : {{ Input::get('username') }}
                                                         <p>Password : ***********</p>
                                                     </td>

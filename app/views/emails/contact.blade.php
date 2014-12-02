@@ -144,7 +144,7 @@
                                                 <tr><!-- logo -->
                                                     <td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 18px; letter-spacing: 0px; text-align: center;">
                                                         <a href="{{ URL::to('home') }}" style="text-decoration: none;">
-                                                           <img src="{{ asset('assets/images/logo.png') }}" width='166px' alt="StockPop" />
+                                                           <img src="{{ asset('assets/images/logo.png') }}" width='166px' alt="Life Talk Club" />
                                                         </a>
                                                     </td>
                                                 </tr>

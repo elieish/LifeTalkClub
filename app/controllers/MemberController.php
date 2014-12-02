@@ -95,6 +95,15 @@ class MemberController extends BaseController {
             $member->active     = 1;
             $member->save();
 
+            $data['membershipno'] = $member->membershipno;
+            // Send Email
+            Mail::send('emails.registration', $data, function($message) use ($data)
+            {
+                $message->from('info@lifetalkclub.com', $data['firstname']);
+                $message->to($data['username'])->subject('Life Talk Club Membership Confirmation');
+
+            });
+
             // redirect
             Session::flash('success', 'Thank you for your registration');
             return Redirect::to('/members/signup');

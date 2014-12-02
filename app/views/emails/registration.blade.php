@@ -44,11 +44,11 @@
                                                 </tr>
                                                 <tr>
                                                     <td width="100%" style=" font-size: 14px; line-height: 24px; font-family:helvetica, Arial, sans-serif; text-align: left; color:#87919F;">
-                                                        <p>Dear {{ Input::get('firstname') }} {{ Input::get('lastname') }},</p>
+                                                        <p>Dear {{ Input::get('firstname') }} {{ Input::get('surname') }},</p>
 
                                                         <p>This message is to confirm that your registration on Life Talk Club has been successful.</p>
                                                         <p> The details of your account are below:</p>
-                                                        <p> Membership No: {{ Input::get('membershipno')}}
+                                                        <p> Membership No: {{ $data['membershipno'] }}
                                                         <p>Username : {{ Input::get('username') }}
                                                         <p>Password : ***********</p>
                                                     </td>

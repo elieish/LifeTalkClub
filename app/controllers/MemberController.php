@@ -96,6 +96,8 @@ class MemberController extends BaseController {
             $member->save();
 
             $data['membershipno'] = $member->membershipno;
+
+
             // Send Email
             Mail::send('emails.registration', $data, function($message) use ($data)
             {

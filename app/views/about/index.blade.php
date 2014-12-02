@@ -72,46 +72,6 @@
                     <p class="lead">*Business Management<br>*Marketing Management<br>*Family Counciling<br>*Life Coaching<br>*Personal Coaching<br>*Business Coaching<br>*Leadership Training<br>*Team Building<br>*Wealth Creation</p>
                 </div>
 
-                <div class="row">
-
-                    <div class="col-sm-3">
-                        <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-                            <div class="joomla-skill">
-                                <p><em>85%</em></p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="col-sm-3">
-                        <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-                            <div class="html-skill">
-                                <p><em>95%</em></p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3">
-                        <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-                            <div class="css-skill">
-                                <p><em>80%</em></p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-
-                     <div class="col-sm-3">
-                        <div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
-                            <div class="wp-skill">
-                                <p><em>90%</em></p>
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
             </div><!--/.our-skill-->
 
 
@@ -130,14 +90,8 @@
                                     <a href="#"><img class="media-object" src="images/man1.jpg" alt=""></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4>Jhon Doe</h4>
+                                    <h4>Timothy Mark</h4>
                                     <h5>Founder and CEO</h5>
-                                    <ul class="tag clearfix">
-                                        <li class="btn"><a href="#">Web</a></li>
-                                        <li class="btn"><a href="#">Ui</a></li>
-                                        <li class="btn"><a href="#">Ux</a></li>
-                                        <li class="btn"><a href="#">Photoshop</a></li>
-                                    </ul>
 
                                     <ul class="social_icons">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -158,14 +112,8 @@
                                     <a href="#"><img class="media-object" src="images/man2.jpg" alt=""></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4>Jhon Doe</h4>
+                                    <h4>Titus Roseau</h4>
                                     <h5>Founder and CEO</h5>
-                                    <ul class="tag clearfix">
-                                        <li class="btn"><a href="#">Web</a></li>
-                                        <li class="btn"><a href="#">Ui</a></li>
-                                        <li class="btn"><a href="#">Ux</a></li>
-                                        <li class="btn"><a href="#">Photoshop</a></li>
-                                    </ul>
                                     <ul class="social_icons">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -204,14 +152,8 @@
                                 </div>
 
                                 <div class="media-body">
-                                    <h4>Jhon Doe</h4>
+                                    <h4>Daniel Mathews</h4>
                                     <h5>Founder and CEO</h5>
-                                    <ul class="tag clearfix">
-                                        <li class="btn"><a href="#">Web</a></li>
-                                        <li class="btn"><a href="#">Ui</a></li>
-                                        <li class="btn"><a href="#">Ux</a></li>
-                                        <li class="btn"><a href="#">Photoshop</a></li>
-                                    </ul>
                                     <ul class="social_icons">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -229,14 +171,8 @@
                                     <a href="#"><img class="media-object" src="images/man4.jpg" alt=""></a>
                                 </div>
                                 <div class="media-body">
-                                    <h4>Jhon Doe</h4>
+                                    <h4>Deon Ragan</h4>
                                     <h5>Founder and CEO</h5>
-                                    <ul class="tag clearfix">
-                                        <li class="btn"><a href="#">Web</a></li>
-                                        <li class="btn"><a href="#">Ui</a></li>
-                                        <li class="btn"><a href="#">Ux</a></li>
-                                        <li class="btn"><a href="#">Photoshop</a></li>
-                                    </ul>
                                     <ul class="social_icons">
                                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>

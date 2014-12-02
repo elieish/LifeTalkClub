@@ -8,7 +8,7 @@
                     The club was formed in 2008 due to certain circumstances it was not
                     not introduced to communities of South Africa but it has been remained
                     in the lime light and core of the mind of its directorship .
-                    This organization Club is one of the wildest and Bigggest dream of the
+                    This organization Club is one of the wildest and biggest dream of the
                     Zillionaires and of the global vision.
                     The main objective of this Club is to create the poorest of the poorest
                     to be wealthy balance and to create the platform of every individual

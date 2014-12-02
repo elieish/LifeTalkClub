@@ -4,7 +4,8 @@
         <div class="container">
             <div class="center">
                 <h2>Packages</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <p class="lead">Life Talk Club will channel the member by paying for the member an amount of <span class='pack'>R1500</span><br>once off .The member
+                is responsible to introduce <span class='pack'>5 members or 10</span> in the downline.</p>
             </div>
             <div class="pricing-area text-center">
                 <div class="row">

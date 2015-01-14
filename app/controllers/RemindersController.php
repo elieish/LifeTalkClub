@@ -31,8 +31,8 @@ class RemindersController extends Controller {
 				return Redirect::back()->with('error', Lang::get($response));
 
 			case Password::REMINDER_SENT:
-				$data =array();
-				$data['email'] ='elieish@gmail.com';
+				$data 			= array();
+				$data['email']  = Input::only("email");
 				Session::flash('success', 'Please check your email for a password reset link.');
 				Mail::send('emails.auth.reminder', $data, function($message) use ($data)
             	{

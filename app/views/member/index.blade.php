@@ -32,7 +32,7 @@
                                     <td>2</td>
                                     <td>25</td>
                                     <td>R2500</td>
-                                    <td>R850 Voucher/td>
+                                    <td>R850 Voucher</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>

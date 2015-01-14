@@ -24,8 +24,6 @@ Route::controller('admin', 'AdminLoginController');
 
 Route::controller('dashboard', 'AdminDashboardController');
 
-Route::controller('password', 'RemindersController');
-
 Route::controller('contact', 'ContactController');
 
 Route::get('logout', function () {
@@ -33,7 +31,11 @@ Route::get('logout', function () {
     return Redirect::to('/');
 });
 
+Route::controller('password', 'RemindersController');
+
 Route::controller('/', 'HomeController');
+
+
 
 
 

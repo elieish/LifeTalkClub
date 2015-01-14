@@ -82,7 +82,7 @@
 
                                 <div class="checkbox"><!-- remmember -->
                                     <label>
-                                        <input type="checkbox"> Remember me &bull; <a class="forgot" href="page-signin.html">Forgot password?</a>
+                                        <input type="checkbox"> Remember me &bull; <a class="forgot" href="password">Forgot password?</a>
                                     </label>
                                 </div>
 

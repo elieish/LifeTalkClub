@@ -7,7 +7,7 @@ class RemindersController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getRemind()
+	public function getIndex()
 	{
 		return View::make('password.remind');
 	}
@@ -17,14 +17,22 @@ class RemindersController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function postRemind()
+	public function postIndex()
 	{
-		switch ($response = Password::remind(Input::only('email')))
+		$response 	= Password::remind(Input::only("email"),function($message){
+			$message->subject('Life Talk Club Password Reset');
+		});
+
+		switch ($response)
 		{
+
 			case Password::INVALID_USER:
+				Session::flash('error', Lang::get($response));
 				return Redirect::back()->with('error', Lang::get($response));
 
 			case Password::REMINDER_SENT:
+
+				Session::flash('success', 'Please check your email for a password reset link.');
 				return Redirect::back()->with('status', Lang::get($response));
 		}
 	}

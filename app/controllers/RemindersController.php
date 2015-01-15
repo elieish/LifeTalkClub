@@ -20,11 +20,11 @@ class RemindersController extends Controller {
 	public function postIndex()
 	{
 
-
-		$formdata 	= Input::all();
 		$response 	= Password::remind(Input::only("email"),function($message){
+			$message->from('info@lifetalkclub.com', 'Life Talk Club');
 			$message->subject('Life Talk Club Password Reset');
 		});
+
 		switch ($response)
 		{
 

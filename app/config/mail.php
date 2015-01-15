@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => 'info@lifetalkclub.co.za', 'name' => 'Life Talk Club'),
+	'from' => array('address' => null, 'name' => null),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'encryption' => '',
+	'encryption' => 'tls',
 
 	/*
 	|--------------------------------------------------------------------------

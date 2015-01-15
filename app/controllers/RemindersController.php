@@ -22,9 +22,8 @@ class RemindersController extends Controller {
 
 
 		$formdata 	= Input::all();
-		$response 	= Password::remind(Input::only("email"),function($message,$formdata){
-			$message->to('elieish@gmail.com')->subject('Life Talk Club Password Reset');
-
+		$response 	= Password::remind(Input::only("email"),function($message){
+			$message->subject('Life Talk Club Password Reset');
 		});
 		switch ($response)
 		{

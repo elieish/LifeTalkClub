@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('title')
-    <title>Life Talk Club | Password Remind</title>
+    <title>Life Talk Club | Reset Password</title>
 @show
 @section('content')
 <div id="wrapper">
@@ -13,11 +13,11 @@
                 -->
 
                 <div class="container">
-                    <h1>Password Remind</h1>
+                    <h1>Password Reset</h1>
 
                     <ul class="breadcrumb">
-                        <li><a href="/">Home</a></li>
-                        <li class="active">Password Remind</li>
+                        <li><a href="home">Home</a></li>
+                        <li class="active">Password Reset</li>
                     </ul>
                 </div>
             </header>
@@ -36,17 +36,21 @@
 
 
                         </div>
-                <div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <form action="/password/index" method="POST">
-                               <input class="form-control" type="email" placeholder='Email' name="email">
-                               <br>
-                               <input type="submit" class="btn btn-primary btn-lg" value="Send Reminder">
-                            </form>
-                        </div>
+            <div class="row">
+                    <div class="col-md-4">
+                       <form action="/password/reset" method="POST">
+                           <div class="row">
+                                <input type="hidden" name="token" value="{{ $token }}">
+                                <input class="form-control" placeholder='Email' type="email" name="email">
+                                <input class="form-control" placeholder='New Password' type="password" name="password">
+                                <input class="form-control" type="password" placeholder='Repeat Password' name="password_confirmation">
+                           </div>
+                           <br>
+                           <input type="submit" class="btn btn-primary btn-lg" value="Reset Password">
+                        </form>
                     </div>
-                </div>
+            </div>
+
             </section>
 </div>
 

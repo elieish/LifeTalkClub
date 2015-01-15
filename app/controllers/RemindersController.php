@@ -9,7 +9,7 @@ class RemindersController extends Controller {
 	 */
 	public function getIndex()
 	{
-		return View::make('password.remind');
+		return View::make('password_remind');
 	}
 
 	/**
@@ -19,10 +19,13 @@ class RemindersController extends Controller {
 	 */
 	public function postIndex()
 	{
+
+		// Get Global Settings
+		$settings 	= Settings::find(1);
+		$formdata 	= Input::all();
 		$response 	= Password::remind(Input::only("email"),function($message){
 			$message->subject('Life Talk Club Password Reset');
 		});
-
 		switch ($response)
 		{
 
@@ -31,14 +34,8 @@ class RemindersController extends Controller {
 				return Redirect::back()->with('error', Lang::get($response));
 
 			case Password::REMINDER_SENT:
-				$data 			= array();
-				$data['email']  = Input::only("email");
+
 				Session::flash('success', 'Please check your email for a password reset link.');
-				Mail::send('emails.auth.reminder', $data, function($message) use ($data)
-            	{
-                	$message->from('info@lifetalkclub.com');
-                	$message->to($data['email'])->subject('Life Talk Club Password Reset');
-            	});
 				return Redirect::back()->with('status', Lang::get($response));
 		}
 	}
@@ -53,7 +50,7 @@ class RemindersController extends Controller {
 	{
 		if (is_null($token)) App::abort(404);
 
-		return View::make('password.reset')->with('token', $token);
+		return View::make('password_reset')->with('token', $token);
 	}
 
 	/**
@@ -63,6 +60,7 @@ class RemindersController extends Controller {
 	 */
 	public function postReset()
 	{
+
 		$credentials = Input::only(
 			'email', 'password', 'password_confirmation', 'token'
 		);
@@ -70,18 +68,19 @@ class RemindersController extends Controller {
 		$response = Password::reset($credentials, function($user, $password)
 		{
 			$user->password = Hash::make($password);
-
 			$user->save();
 		});
-
 		switch ($response)
 		{
 			case Password::INVALID_PASSWORD:
 			case Password::INVALID_TOKEN:
 			case Password::INVALID_USER:
-				return Redirect::back()->with('error', Lang::get($response));
+				Session::flash('error', Lang::get($response));
+				return Redirect::to('/password/reset/' . Input::get('token'))->with('token', Input::get('token'));
 
 			case Password::PASSWORD_RESET:
+				$user = User::where('email', '=', Input::get('email'))->first();
+				Auth::login($user);
 				return Redirect::to('/');
 		}
 	}

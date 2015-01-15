@@ -31,9 +31,12 @@ Route::get('logout', function () {
     return Redirect::to('/');
 });
 
-Route::controller('password', 'RemindersController');
+Route::controller('password','RemindersController');
 
 Route::controller('/', 'HomeController');
+
+
+
 
 
 

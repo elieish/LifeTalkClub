@@ -92,7 +92,7 @@
                                             <tbody>
                                                 <tr><!-- copyright -->
                                                     <td width="100%" style="font-family: helvetica, Arial, sans-serif; font-size: 11px; text-align: center; line-height: 24px;">
-                                                        <center>Copyright &copy; {{ $settings->company_name }} 2014. All Rights Reserved.</center>
+                                                        <center>Copyright &copy; 2014. All Rights Reserved.</center>
                                                     </td>
                                                 </tr>
                                             </tbody>

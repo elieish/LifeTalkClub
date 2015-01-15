@@ -64,6 +64,7 @@ class MemberController extends BaseController {
             $user->firstname  = Input::get('firstname');
             $user->surname    = Input::get('surname');
             $user->password   = Hash::make(Input::get('password'));
+            $user->email      = Input::get('username');
             $user->role       = 2;
             $user->active     = 1;
             $user->save();
